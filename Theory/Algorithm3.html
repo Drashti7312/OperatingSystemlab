@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Theory_css/Theory_Algorithm3and4.css">
+
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <li> <a href ="../Algorithm/Algorithm3.html"> Implement </a></li>
+            <li> <a href ="../index.html"> Home </a></li>
+        </ul>
+    </nav>
+    <div class="theory-text">
+        
+        <h2><strong>
+     SCAN(Elevator Scan) Disk Scheduling Algorithm
+</strong></h2>
+            <p><t>The SCAN disk scheduling algorithm is another type of disk scheduling algorithm. In this algorithm, we move the disk arm into a specific direction (direction can be moved towards large value or the smallest value). Each request is addressed that comes in its path, and when it comes into the end of the disk, then the disk arm will move reverse, and all the requests are addressed that are arriving in its path. Scan disk scheduling algorithm is also called an elevator algorithm because its working is like an elevator.</t></p>
+        <h4>Algorithm:</h4>
+        <img src="../img/theory_img/dsimg1.jpg" alt="Disk Scheduling Algorithm">
+        <ul type="square">
+            <li>Let Request array represents an array storing indexes of tracks that have been requested in ascending order of their time of arrival. ‘head’ is the position of disk head.</li>
+            <li>Let direction represents whether the head is moving towards left or right.</li>
+            <li>In the direction in which head is moving service all tracks one by one.</li>
+            <li>Calculate the absolute distance of the track from the head.</li>
+            <li>Currently serviced track position now becomes the new head position.</li>
+            <li>Go to step 3 until we reach at one of the ends of the disk.</li>
+            <li>If we reach at the end of the disk reverse the direction and go to step 2 until all tracks in request array have not been serviced.</li>
+        </ul>
+        <h4 class="5">Video:</h4>
+        <iframe width="460" height="275" src="https://www.youtube.com/embed/xouo556RGiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h4>Advantages of SCAN Disk scheduling Algorithm:</h4>
+        <p>The advantages of SCAN disk scheduling algorithm are:</p>
+        <ul type="square">
+            <li>In SCAN disk scheduling, there is a low variance of response time.</li>
+            <li>In this algorithm, throughput is high.</li>
+            <li>Response time is average.</li>
+            <li>In SCAN disk scheduling, there is no starvation.</li>
+        </ul>
+        <h4>Disadvantages of SCAN Disk Scheduling Algorithm:</h4>
+        <p>The disadvantages of SCAN disk scheduling algorithm are:</p>
+        <ul type="square">
+            <li>SCAN disk scheduling algorithm takes long waiting time for the cylinders, just visited by the head.</li>
+            <li>In C-SCAN disk scheduling, we have to move the disk head to the end of the disk even when we don’t have any request to service.</li>
+            <li>It is more complex algorithm to implement.</li>
+            <br>    
+        </ul>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <center>
+                <p> Copyright &copy;. All Rights Reserved </p>
+            </center>
+        </div>
+    </footer>
+
+</body>
+</html>
