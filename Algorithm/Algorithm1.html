@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Algorithm</title>
+    <script src="../JS/Algorithm1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
+    <link rel="stylesheet" href="../CSS/Algo_css/Algorithm1and2.css">
+</head>
+<body>
+    
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <li> <a href ="Theory/Algorithm1.html"> Implement </a></li>
+            <li> <a href ="index.html"> Home </a></li>
+        </ul>
+    </nav>
+
+    <div class="calc_container">
+        <div class="header">
+            <h2><strong>First Come First Serve(FCFS) Algorithm Implementation</strong></h2>
+        </div>
+        <div class="calculation">
+                <label for="values">Request Queue:</label>
+                <input type="text" name="values" id="Queue_vals" placeholder="Separate them With Space">
+                <br>
+                <label for="generateQ"></label>
+                <button onclick="GenerateQ();" type="submit" id="generateQ" class="btn">Generate Queue </button>
+            <br>
+            <div class="head_posi">
+                <label for="value">Current Read/Write Head Position</label>
+                <input type="text" name="value" id="pos_head" placeholder="Head Position">
+            </div>
+            <div class="implem">
+                <button onclick="fcfsImplement();" id="implementbutton" type="button" class="btn"> Implement </button>
+            </div>
+        </div>
+        <div class="graph">
+            <canvas id="AlgoGraph" style="width:100%;max-width:700px"></canvas>
+        </div>
+        <div id="Output"></div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="container">
+            <center>
+                <p> Copyright &copy;. All Rights Reserved </p>
+            </center>
+        </div>
+    </footer>
+
+
+
+
+
+    </body>
+</html>
